@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark Navy Blue Theme */
+  --navy-950: #0a1628;
+  --navy-900: #0f1f3d;
+  --navy-800: #162d52;
+  --navy-700: #1e3a5f;
+  --navy-600: #2a4a73;
+
+  /* Accent Colors */
+  --gold: #c9a84c;
+  --gold-light: #d4b966;
+  --gold-dark: #a88a3c;
+
+  /* Cyan Accent for tech feel */
+  --cyan: #38bdf8;
+  --cyan-light: #7dd3fc;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --gray-100: #f4f4f5;
+  --gray-200: #e4e4e7;
+  --gray-300: #d4d4d8;
+  --gray-400: #a1a1aa;
+  --gray-500: #71717a;
+
+  /* Theme variables */
+  --background: var(--navy-950);
+  --foreground: var(--white);
+  --muted: var(--gray-400);
+  --accent: var(--gold);
+  --accent-hover: var(--gold-light);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+
+  --color-cyan: var(--cyan);
+  --color-cyan-light: var(--cyan-light);
+
+  --font-heading: var(--font-montserrat);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Gradient backgrounds */
+.gradient-radial {
+  background: radial-gradient(ellipse at center, var(--navy-800) 0%, var(--navy-950) 70%);
+}
+
+.gradient-hero {
+  background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 100%);
+}
+
+/* Glass effect for cards */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Gold gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle glow effects */
+.glow-gold {
+  box-shadow: 0 0 40px rgba(201, 168, 76, 0.15);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.1);
+}
+
+/* Smooth animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy-950);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy-700);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy-600);
+}
