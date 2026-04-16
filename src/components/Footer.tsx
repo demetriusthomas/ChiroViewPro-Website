@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const footerLinks = {
   product: [
@@ -36,11 +37,13 @@ export default function Footer() {
           {/* Brand column */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-gold to-gold-light rounded-lg flex items-center justify-center">
-                <span className="text-navy-950 font-bold text-xl font-heading">
-                  C
-                </span>
-              </div>
+              <Image
+                src="/logo.svg"
+                alt="ChiroView Pro"
+                width={40}
+                height={40}
+                className="rounded-lg"
+              />
               <span className="text-xl font-heading font-bold text-white">
                 ChiroView<span className="text-gold">Pro</span>
               </span>

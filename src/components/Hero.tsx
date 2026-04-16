@@ -61,11 +61,12 @@ export default function Hero() {
           </div>
 
           {/* Feature highlights */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
             {[
               { icon: '🔬', label: 'DICOM Imaging' },
               { icon: '🤖', label: 'AI-Powered Notes' },
               { icon: '📅', label: 'Smart Scheduling' },
+              { icon: '💳', label: 'Automated Billing' },
               { icon: '🔒', label: 'HIPAA Compliant' },
             ].map((feature) => (
               <div
