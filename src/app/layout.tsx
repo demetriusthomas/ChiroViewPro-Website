@@ -58,21 +58,12 @@ export const metadata: Metadata = {
     title: "ChiroView Pro | Advanced Chiropractic Practice Management",
     description:
       "The complete practice management solution for modern chiropractors. DICOM imaging, patient scheduling, AI-powered notes, and more.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "ChiroView Pro - Practice Management Software",
-      },
-    ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "ChiroView Pro | Chiropractic Practice Management",
     description:
       "Streamline your practice with advanced DICOM imaging, patient management, and AI-powered tools.",
-    images: ["/og-image.jpg"],
   },
   icons: {
     icon: "/favicon.ico",

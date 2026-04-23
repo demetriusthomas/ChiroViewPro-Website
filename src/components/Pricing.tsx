@@ -3,14 +3,16 @@ import Link from 'next/link'
 const plans = [
   {
     name: 'Starter',
-    price: '$49',
-    period: '/month',
-    description: 'For solo practitioners getting started',
+    price: '$149',
+    period: '/mo per practitioner',
+    description: 'For solo practitioners',
     features: [
-      'Up to 100 patients',
-      'Basic scheduling',
+      'Unlimited patients',
+      'HIPAA-compliant infrastructure',
+      'Scheduling & SMS reminders',
       'SOAP notes',
-      'Invoice generation',
+      'Invoicing & payments',
+      'DICOM image viewer',
       'Email support',
     ],
     cta: 'Book a Demo',
@@ -18,16 +20,17 @@ const plans = [
   },
   {
     name: 'Professional',
-    price: '$99',
-    period: '/month',
-    description: 'For growing practices',
+    price: '$249',
+    period: '/mo per practitioner',
+    description: 'For established, growing practices',
     features: [
-      'Unlimited patients',
-      'Advanced scheduling',
-      'SOAP notes with AI assist',
-      'Invoice & payments',
-      'DICOM image management',
-      'SMS reminders',
+      'Everything in Starter',
+      'AI-assisted SOAP notes',
+      'DICOM annotations & measurements',
+      'Online booking portal',
+      'Integrated payment processing',
+      'Practice analytics dashboard',
+      'Up to 3 practitioners',
       'Priority support',
     ],
     cta: 'Book a Demo',
@@ -35,17 +38,18 @@ const plans = [
   },
   {
     name: 'Enterprise',
-    price: '$199',
-    period: '/month',
-    description: 'For multi-location practices',
+    price: 'Custom',
+    period: '',
+    description: 'For multi-location & group practices',
     features: [
       'Everything in Professional',
-      'Multi-practitioner support',
+      'Multi-location support',
+      'Unlimited practitioners',
       'Custom branding',
-      'Advanced analytics',
-      'HIPAA compliance tools',
-      'API access',
-      'Dedicated account manager',
+      'API access & integrations',
+      'Advanced reporting',
+      'Dedicated onboarding & account manager',
+      'SLA-backed support',
     ],
     cta: 'Contact Sales',
     popular: false,
@@ -82,7 +86,7 @@ export default function Pricing() {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 ${
+              className={`relative flex flex-col rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 ${
                 plan.popular
                   ? 'bg-gradient-to-b from-gold/10 to-transparent border-2 border-gold/30 glow-gold'
                   : 'glass hover:bg-white/5'
@@ -114,7 +118,7 @@ export default function Pricing() {
               </div>
 
               {/* Features */}
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-grow">
                 {plan.features.map((feature) => (
                   <li
                     key={feature}
